@@ -43,10 +43,6 @@ public class LoginServlet extends HttpServlet {
             }
         }
 
-//        // 设置 Cookies
-//        Cookie cookie = new Cookie("user_info", "skong");
-//        response.addCookie(cookie);
-
         // 渲染文档
         response.setContentType("text/html; charset=GBK");
         PrintWriter out = response.getWriter();
