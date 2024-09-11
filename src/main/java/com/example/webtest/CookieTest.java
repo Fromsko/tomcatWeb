@@ -37,6 +37,7 @@ public class CookieTest extends HttpServlet {
         response.addCookie(cookieUser);
         response.addCookie(cookiePasswd);
 
+        // 数据流响应
         PrintWriter out = response.getWriter();
         out.println("Welcome, " + request.getParameter("UserName"));
     }
