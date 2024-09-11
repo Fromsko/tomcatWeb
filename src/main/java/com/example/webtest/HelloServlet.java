@@ -24,7 +24,7 @@ public class HelloServlet extends HttpServlet {
     }
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        response.setContentType("text/html");
+        response.setContentType("text/html; charset=GBK");
 
         // 获取数据输出流 -> web 浏览器
         PrintWriter out = response.getWriter();
