@@ -1,7 +1,7 @@
 package com.example.webtest;
 
-import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -19,26 +19,57 @@ public class LoginServlet extends HttpServlet {
 
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        try {
-            this.doPost(request, response);
-        } catch (ServletException e) {
-            throw new RuntimeException(e);
+        String cookieKey = "userInfo";
+        String cookieValue = "skong";
+
+        // 读取 Cookies
+        Cookie[] cookies = request.getCookies();
+        String user = "";
+        String pwd = "";
+        String isChecked = "";
+
+        // 判断是否曾经存储过
+        if (cookies != null) {
+            isChecked = "checked";
+            for (Cookie cookie : cookies) {
+                // 取出用户
+                if (cookie.getName().equals(cookieKey)) {
+                    user = cookie.getName();
+                }
+                // 取出密码
+                if (cookie.getValue().equals(cookieValue)) {
+                    pwd = cookie.getValue();
+                }
+            }
         }
-    }
 
-    @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        PrintWriter out = resp.getWriter();
+//        // 设置 Cookies
+//        Cookie cookie = new Cookie("user_info", "skong");
+//        response.addCookie(cookie);
 
+        // 渲染文档
+        response.setContentType("text/html; charset=GBK");
+        PrintWriter out = response.getWriter();
         String buff = "<html>" +
                 "<body>" +
-                "<form>" +
-                "<input type='text' name='demo'/>" +
+                "<title>登录</title>" +
+                "<center>" +
+                "<form action='CookieTest' method='post'>\n" +
+                "姓名: <input type='text' name='UserName' value='" + user + "' /><br/>" +
+                "密码: <input type='text' name='Password' value='" + pwd + "' /><br/>" +
+                "保存账号密码<input type='checkbox' name='SaveCookie' value='Yes'" + isChecked + ">\n<br/>" +
+                "<input type='submit'/>\n" +
                 "</form>" +
+                "</center>" +
                 "</body>" +
                 "</html>";
 
         out.println(buff);
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+        doGet(req, resp);
     }
 
     @Override
