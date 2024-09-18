@@ -39,7 +39,34 @@ public class CookieTest extends HttpServlet {
 
         // 数据流响应
         PrintWriter out = response.getWriter();
-        out.println("Welcome, " + request.getParameter("UserName"));
+        out.println("<html>");
+        out.println("<head>");
+        out.println("<title>JSP Hello Servlet</title>");
+        out.println("<style>");
+        out.println("body {");
+        out.println("  margin: 0;");
+        out.println("  height: 100vh;");
+        out.println("  display: flex;");
+        out.println("  justify-content: center;");
+        out.println("  align-items: center;");
+        out.println("  background: linear-gradient(45deg, #e3f2fd, #bbdefb);");
+        out.println("  color: #333;");
+        out.println("  font-family: Arial, sans-serif;");
+        out.println("  text-align: center;");
+        out.println("  user-select: none;");
+        out.println("}");
+        out.println("h1 {");
+        out.println("  font-size: 2.5rem;");
+        out.println("  margin-bottom: 20px;");
+        out.println("}");
+        out.println("</style>");
+        out.println("</head>");
+        out.println("<body>");
+        out.println("<h1> Welcome, " + request.getParameter("UserName") + "</h1>");
+        out.println("<br/>");
+        out.println("<h1> Servlet </h1>");
+        out.println("</body>");
+        out.println("</html>");
     }
 
     @Override

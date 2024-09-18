@@ -9,14 +9,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1d530b5-d5f0-46ea-8526-7fa737b85e94" name="更改" comment="学习 Cookie 追踪">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/bookChoose.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
+    <list default="true" id="e1d530b5-d5f0-46ea-8526-7fa737b85e94" name="更改" comment="feat: 增加购入选择">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/webtest/ShoppingListServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/webtest/CookieTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/webtest/CookieTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/webtest/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/webtest/LoginServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/webtest/HelloServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/webtest/HelloServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/webtest/ShoppingCarServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/webtest/ShoppingCarServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/bookChoose.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/bookChoose.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,6 +194,7 @@
       <workItem from="1726030958877" duration="126000" />
       <workItem from="1726042547919" duration="839000" />
       <workItem from="1726043405829" duration="1857000" />
+      <workItem from="1726625634467" duration="4575000" />
     </task>
     <task id="LOCAL-00001" summary="基础架构">
       <created>1726044459457</created>
@@ -208,7 +210,21 @@
       <option name="project" value="LOCAL" />
       <updated>1726051244677</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="feat: 修正登录页面和Cookies获取">
+      <created>1726055495156</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1726055495156</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat: 增加购入选择">
+      <created>1726055516581</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1726055516581</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -240,7 +256,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="基础架构" />
     <MESSAGE value="学习 Cookie 追踪" />
-    <option name="LAST_COMMIT_MESSAGE" value="学习 Cookie 追踪" />
+    <MESSAGE value="feat: 修正登录页面和Cookies获取" />
+    <MESSAGE value="feat: 增加购入选择" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 增加购入选择" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
