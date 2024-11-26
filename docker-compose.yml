@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  tomcat:
+    build:
+      context: . # 构建上下文是当前项目目录
+      dockerfile: Dockerfile
+    ports:
+      - '8080:8080' # Exposes port 8080 on localhost
+    volumes:
+      - ./target:/usr/local/tomcat/webapps # 只挂载 target 目录
+    environment:
+      - CATALINA_OPTS=-Xms512M -Xmx1024M # Optional: Configure memory settings
+    networks:
+      - web-test-network
+
+networks:
+  web-test-network:
+    driver: bridge
